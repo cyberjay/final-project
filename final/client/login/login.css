@@ -1,0 +1,15 @@
+body{
+  background: url(bbb.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.container{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}

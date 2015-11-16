@@ -1,0 +1,146 @@
+<template name="tickets">
+
+  <div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TicketDojo!</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li>
+              <button class="btn btn-info" data-toggle="modal" data-target="#CreateTicket">Create Ticket</button>
+            </li>
+            <li><a href="#">View Tickets</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <button class="btn btn-info" data-toggle="modal" data-target="#AddUser"><span
+                  class="glyphicon glyphicon-user"></span> Add User
+              </button>
+            </li>
+            <li>
+              <button class="logout btn btn-danger">Log Out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <article>
+      <div class="col-md-4 col-md-offset-6 col-md-offset-4" id="instruction">
+        <br>
+
+        <h1 class="font-effect-shadow-multiple" style="font-family: Rancho;"><b>Welcome to TicketDojo!</b></h1>
+        <br>
+
+        <p>The TicketDojo is a web application that manages and maintatins lists of technical issues, as needed by an
+          organization. This application helps people within the organization to communicate with the IT department with
+          regards on technical issues.</p>
+
+        <p>The goal of this web-application is to help the people within an organization as fast as we could by the help
+          of creating tickets.</p>
+
+        <p>Tickets are created and use as the means for the communication of the two parties. The ticket mainly contains
+          vital informations such as
+          the name of the sender, their department, the subject of the technical issue and the detailed description of the
+          technical issue. </p>
+        <br><br>
+
+        <h3 class="font-effect-shadow-multiple" style="font-family: Rancho;"><b>How to use the app:</b></h3>
+
+        <p>1.) Press the
+          <button class="btn btn-default">Create a ticket</button>
+          button to create a new ticket.
+        </p>
+        <p>2.) You can view your current ticket forms by clicking on the
+          <button class="btn btn-default">View ticket</button>
+          button.
+        </p>
+        <p><font color="red"><b>Note: </b></font> Only admins can create new users for both administrators and normal
+          users. Admins can create
+          a new account for a user by clicking the
+          <button class="btn btn-default">Add user</button>
+          at the top right corner
+        </p>
+      </div>
+    </article>
+  </div>
+  <div id="footer_container">
+    <footer id="footer" class="panel-footer">Copyright (c) Jaimar John Sison</footer>
+  </div>
+
+  {{>register}}
+
+
+  <div class="modal fade" id="CreateTicket" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h1 class="modal-title font-effect-shadow-multiple" style="font-family: Rancho;">Create a Ticket!</h1>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Name: </label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="department">Department: </label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="department" placeholder="Enter Department">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="subject">Subject: </label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="subject" placeholder="Enter Subject Title">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="sel2">Select topic:</label>
+
+              <div class="col-sm-10">
+                <select class="form-control" id="sel2">
+                  <option>Hardware Problem</option>
+                  <option>Software Problem</option>
+                  <option>Network Problem</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="message">Message: </label>
+
+              <div class="col-sm-10">
+              <textarea id="message" class="form-control" rows="5" cols="62"
+                        placeholder="Type message here..."></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</template>
+
