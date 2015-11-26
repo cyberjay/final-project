@@ -4,15 +4,18 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  align-content: center;
+  align-items: center;
 }
 
 
-#instruction{
+#instructions{
   opacity: 1;
   background-color: whitesmoke;
   padding: 20px;
   text-align: center;
   min-height: 75vh;
+
 }
 
 #footer {
@@ -32,8 +35,8 @@
 #footer_container {
 
   height:24px;
-width: 100%;
-margin:auto;
+  width: 100%;
+  margin:auto;
 
 }
 

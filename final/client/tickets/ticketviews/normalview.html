@@ -1,0 +1,27 @@
+<template name="normal_view">
+
+  <table class="table table-responsive table-bordered table-striped">
+    <thead>
+    <tr>
+      <td>Name</td>
+      <td>Department</td>
+      <td>Subject</td>
+      <td>Topic</td>
+      <td>Message</td>
+      <td>Date</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each ticket}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{department}}</td>
+      <td>{{subject}}</td>
+      <td>{{topic}}</td>
+      <td>{{message}}</td>
+      <td>{{createdAt}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>

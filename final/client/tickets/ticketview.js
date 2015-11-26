@@ -1,4 +1,7 @@
-Template.tickets.events({
+/**
+ * Created by JAIMARJOHN on 11/24/2015.
+ */
+Template.ticketview.events({
   'click .logout': function(event){
     event.preventDefault();
     Meteor.logout();
@@ -14,4 +17,5 @@ Template.tickets.events({
   }
 
 });
+
 
