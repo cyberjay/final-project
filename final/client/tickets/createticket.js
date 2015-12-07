@@ -26,8 +26,12 @@ Template.createticket.events({
         createdAt: new Date()
     });
     clearValues()
+    $('#CreateTicket')
+        .on('hidden.bs.modal', function() {
+          Router.go('/ticketview');
+        })
+        .modal('hide');
     alert("Ticket Created!");
-
   }
 });
 

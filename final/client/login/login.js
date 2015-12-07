@@ -19,7 +19,12 @@ Template.logging_in.events({
        alert(error.reason);
       } else {
           clearValues()
-          Router.go("/tickets");
+          //Router.go("/tickets");
+        $('#AdminLogin')
+            .on('hidden.bs.modal', function() {
+              Router.go('/tickets');
+            })
+            .modal('hide');
       }
 
     });

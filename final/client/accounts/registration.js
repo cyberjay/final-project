@@ -17,6 +17,9 @@ var clearValues = function(){
 
 Template.register.events({
   'submit form': function(event) {
+
+
+
     event.preventDefault();
     var name = $('[name=name]').val();
     var department = $('[name=department]').val();
@@ -25,11 +28,24 @@ Template.register.events({
     var password = $('[name=password]').val();
     var roles = $('[name=accounttype]').val();
 
-    Meteor.call("createUsers", username, password, roles, name, email, department);
+    Meteor.call("createUsers", username, password, roles, name, email, department, function(error){
+      if(error){
+        alert(error.reason);
+        alert(error.message);
+      } else {
+        clearValues();
+        $('#AddUser')
+            .on('hidden.bs.modal', function() {
+              Router.go('/tickets');
+            })
+            .modal('hide');
+      }
+
+    });
+
     return false;
+
   }
 
+
 });
-
-clearValues();
-

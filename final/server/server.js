@@ -16,6 +16,6 @@ Meteor.methods({
         Roles.addUsersToRoles(id, user.roles);
       }
     });
-  },
+  }
 
 });

@@ -1,5 +1,5 @@
 <template name="admin_view">
-  <table class="table table-responsive table-bordered table-striped">
+  <table class="table table-responsive table-bordered table-striped ">
     <thead>
       <tr>
         <td><b>Name</b></td>
@@ -8,6 +8,7 @@
         <td><b>Topic</b></td>
         <td><b>Message</b></td>
         <td><b>Date</b></td>
+        <td>X</td>
       </tr>
     </thead>
     <tbody>
@@ -18,9 +19,16 @@
           <td>{{subject}}</td>
           <td>{{topic}}</td>
           <td>{{message}}</td>
-          <td>{{createdAt}}</td>
-        </tr>
+          <td>{{createdAt date}}</td>
+            <td>
+             {{>delet}}
+            </td>
+         </tr>
       {{/each}}
     </tbody>
   </table>
+</template>
+
+<template name="delet">
+  <button class="delete btn-danger"><span class="glyphicon glyphicon-remove-sign"></span></button>
 </template>
